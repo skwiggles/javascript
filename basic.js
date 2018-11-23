@@ -74,3 +74,12 @@ console.log(a == true);  // false
 } else { 
 console.log("wut");
 } 
+
+[0] == false  // true
+[1] == true  // true
+[2] == true  // false
+[2] == false  // false
+
+// truthy vs equal to true
+// null, undefined, 0, NaN, false, "" are not truthy
+// https://stackoverflow.com/questions/23061921/javascript-ifx-vs-ifx-true
