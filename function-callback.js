@@ -1,23 +1,23 @@
 var whenDone = function() {
-    console.log("I am done");
-}
+	console.log('I am done');
+};
 
 var doWork = function(callback) {
-    // do some work
-    setTimeout(callback, 3000);
-}
+	// do some work
+	setTimeout(callback, 3000);
+};
 
-doWork(whenDone)  // after 3s, print I am done
+doWork(whenDone);  // after 3s, print I am done
 
 function sample() {
-    var data = 10;
-    var whenDone = function() {
-        console.log(data);
-    }
-    var doWork = function(callback) {
-        // do some work
-        setTimeout(callback, 3000);
-    }
+	var data = 10;
+	var whenDone = function() {
+		console.log(data);
+	};
+	var doWork = function(callback) {
+		// do some work
+		setTimeout(callback, 3000);
+	};
 }
 
 // if js does not have closure scope, after the last line of doWork function is executed, the data and whenDone will be recycled

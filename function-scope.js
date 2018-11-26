@@ -1,17 +1,17 @@
-var a = 10
+var a = 10;
 function add() {
-    var b = 20;
-    return a + b;
+	var b = 20;
+	return a + b;
 }
-add()  // 30
+add();  // 30
 
 function add2() {
-    var a = 20;
-    var result = add();
-    console.log(result);
+	var a = 20;
+	var result = add();
+	console.log(result);
 }
 
-add2()  // 30
+add2();  // 30
 
 // js is lexically scoped, aka static scope
 // scope of function is set when function being defined
