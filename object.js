@@ -64,3 +64,61 @@ let car5 = Object.create(vehicle)
 // same as let car5 = new Car(), but no make and model
 
 let car6 = Object.create(null)  // totally empty object
+
+// everything is a object, except for primitive type
+let arr = []
+console.dir(arr)  // there is a array parent, providing functions
+
+let func = function() {}
+console.dir(func)  // there is a function parent, providing functions
+
+let str = 'abc'
+str.length
+console.dir(str)  // there is no parent, but what provides .length function? 
+// privitime string is converted to String before call .length function, then converted back to string
+
+window
+// everything is under window
+
+// Quiz:
+// #1
+var obj = {value: 10};
+console.log(obj["name"]);  // undefined
+// #2
+function showCase(value) {
+    switch(value) {
+    case 'A':
+    console.log('Case A');
+    break;
+    case 'B':
+    console.log('Case B');
+    break;
+    case undefined:
+    console.log('undefined');
+    break;
+    default:
+    console.log('Do not know!');
+    }
+    }
+showCase(new String('A'));  // Do not know!
+// new String() creates a object type 
+
+// #3
+function showCase2(value) {
+    switch(value) {
+    case 'A':
+    console.log('Case A');
+    break;
+    case 'B':
+    console.log('Case B');
+    break;
+    case undefined:
+    console.log('undefined');
+    break;
+    default:
+    console.log('Do not know!');
+    }
+    }
+showCase(String('A'));  // Case A
+// String() creates a string type
+// #4

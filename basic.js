@@ -61,16 +61,17 @@ check == null  // true
 // 12.toString()
 
 // Quiz
+// #1
 [false == "", null==undefined]  // [true, true]
-
+// #2
 [typeof null, null instanceof Object]  // ["object", false]
-
+// #3
 var val = 'smtg';
 console.log('Value is ' + (val === 'smtg') ? 'Something' : 'Nothing');  // Something
 // In Javascript and java, the '+' operator has higher precedence than the ?: operator (ternary)
 // error for java because of string + boolean, it tries to convert string to boolean
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#Table
-
+// #4
 var a = [0];
 if ([0]) {  // true
 console.log(a == true);  // false
