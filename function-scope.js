@@ -30,3 +30,39 @@ add2();  // 30
 //     }
 // }
 
+// Variables Are Function-Scoped
+// Variable Declarations Are Hoisted
+function sample() {
+    console.log(bar);  // undefined
+    var bar = 'abc';
+    console.log(bar);  // abc
+}
+
+// same as
+function sample() {
+    var bar;
+    console.log(bar);  // undefined
+    bar = 'abc';
+    console.log(bar);  // abc
+}
+
+function sample2() {
+    console.log(bar);  // error: bar is not defined
+    var bar2 = 'abc';
+    console.log(bar);  // not reached 
+}
+
+// Quiz
+// #1
+// Because of 'var name = 'Jack'', 
+// typeof name === 'undefined' is true
+var name = 'World!';
+function quiz1() {
+    if (typeof name === 'undefined') {
+        var name = 'Jack';
+        console.log('Goodbye ' + name);
+    } else {
+        console.log('Hello ' + name);
+    }
+}
+quiz1()  // Goodbye Jack
